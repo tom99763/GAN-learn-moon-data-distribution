@@ -1,6 +1,5 @@
 import numpy as np
 import matplotlib.pyplot as plt
-from matplotlib.animation import FuncAnimation
 from sklearn.datasets import make_moons
 from model import build_model,update_generator,update_discriminator
 from loss_function import discriminator_loss,generator_loss
