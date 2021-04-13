@@ -11,8 +11,6 @@ import torch.optim as optim
 moon data fitting
 input normal noise z=(z1,....z_d) ---> output 2d data x=(x1,x2)
 
-plt.scatter(x[:,0],x[:,1],color='cyan',edgecolor='black',marker='s',s=40)
-plt.show()
 '''
 
 os.environ["KMP_DUPLICATE_LIB_OK"]  =  "TRUE"
