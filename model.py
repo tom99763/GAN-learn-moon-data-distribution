@@ -23,10 +23,10 @@ def build_model(input_size,output_size,discriminator=False):
 
 
 def update_discriminator(noise,real,D,G,d_loss_fnc,d_optim):
-    fake=G(noise).detach()  #這時候的G是fixed,不更新Generator
+    fake=G(noise).detach()  #G fixed, just update Discriminator
     d_loss=d_loss_fnc(D(real),D(fake))
     d_optim.zero_grad()
-    d_loss.backward(retain_graph=True) #gradient ascend
+    d_loss.backward(retain_graph=True) 
     d_optim.step()
     return d_loss.item()
 
